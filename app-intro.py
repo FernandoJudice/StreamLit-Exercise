@@ -51,8 +51,40 @@ variables = df.keys()
 
 st.title("Correlation betweeen Students habits and final grade")
 
-x_var = st.selectbox('X Axis', variables)
-y_var = st.selectbox('Y Axis', variables)
+st.markdown("""
+### Integrantes Grupo 01
+
+- Fernando Júdice  
+- Gabriel Souza  
+- Ilanna Haimenis  
+- Michael Arruda  
+- Rafaell Cavalcanti  
+- Rodrigo Siqueira
+""")
+
+with st.expander('Show Varible description'):
+    st.markdown("""
+    1. **student_id** – identificador único de cada estudante (numérico).  
+    2. **age** – idade do aluno, em anos.  
+    3. **gender** – gênero (categoria, por ex. “F”, “M”, “Outro”).  
+    4. **study_hours_per_day** – horas médias de estudo por dia.  
+    5. **social_media_hours** – tempo total diário gasto em redes sociais (horas).  
+    6. **netflix_hours** – horas diárias assistindo Netflix.  
+    7. **part_time_job** – horas semanais em trabalho de meio período.  
+    8. **attendance_percentage** – frequência às aulas (%).  
+    9. **sleep_hours** – horas médias de sono por noite.  
+    10. **diet_quality** – índice de qualidade da dieta (0 – 10).  
+    11. **exercise_frequency** – número de sessões de exercício por semana.  
+    12. **parental_education_level** – escolaridade média dos pais (por ex. “High School”, “College”, “Graduate”).  
+    13. **internet_quality** – avaliação da qualidade da internet em casa (0 – 10 ou categorias como “Ruim/Boa/Ótima”).  
+    14. **mental_health_rating** – autoavaliação de bem-estar mental (0 – 10).  
+    15. **extracurricular_participation** – número de atividades extracurriculares em que o estudante participa.  
+    16. **exam_score** – nota final do exame (0 – 100), variável-alvo para análises de desempenho.
+    """)
+
+
+x_var = st.selectbox('X Axis', variables, index = 2)
+y_var = st.selectbox('Y Axis', variables, index = 15)
 
 # You can now use the 'df' DataFrame for your data analysis
 
